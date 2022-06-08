@@ -8,8 +8,8 @@ a CLI written in c++ that converts binary number to decimal and decimal number t
 
 ## Running
 
-- To run the program, type ex..: ```.\decimal-binary-converter.exe --dec2bin 112 or .\decimal-binary-converter.exe --bin2dec 1111```
-- to see the available arguments, type: ```.\decimal-binary-converter.exe -h```
+- To run the program, type ex..: ```.\decimal-binary-converter.exe --dec2bin 112```
+- to see the available arguments, type: ```.\decimal-binary-converter.exe --help```
 
 ```
 to use: .\decimal-binary-converter.exe [--parameters] [number]
