@@ -1,9 +1,9 @@
 #include "project.hpp"
 
 void _help() {
-    std::cout << "Uso: ./a.out [--parametros] [numero]\n"
-                 " --dec2bin Para converter decimal para binario\n"
-                 " --bin2dec Para converter binario para decimal\n";
+    std::cout << "to use: .\\decimal-binary-converter.exe [--parameters] [number]\n"
+                 " --dec2bin To convert decimal to binary\n"
+                 " --bin2dec To convert binary to decimal\n";
 }
 
 void dec2bin(int number) {
@@ -48,7 +48,12 @@ bool check_number(char *x) {
 }
 
 void _start(int argc, char **argv) {
-    if (argc > 2) {
+    if (argc == 2) {
+        auto param = std::string{argv[1]};
+        if (param == "--help" || param == "-h") {
+            _help();
+        }
+    } else if (argc > 2) {
         auto param = std::string{argv[1]};
         auto number = int{};
 
@@ -66,7 +71,5 @@ void _start(int argc, char **argv) {
         } else {
             _help();
         }
-    } else {
-        _help();
     }
 }
